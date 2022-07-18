@@ -2,9 +2,11 @@
 
 sudo apt install git make gcc libx11-dev libxft-dev libxinerama-dev dmenu vim xbindkeys curl lm-sensors 
 
-mkdir System
+sudo cp dwm.desktop /usr/share/xsesions
 
-cd System
+mkdir /home/$1/System
+
+cd /home/$1/System
 
 git clone https://github.com/MitchellWT/mitchells-dwm
 cd mitchells-dwm
@@ -21,9 +23,5 @@ cd mitchells-dwmblocks
 sudo make clean install
 cd ..
 
-cd ..
-
 sudo apt remove gnome gnome-sessions
-
-sudo cp dwm.desktop /usr/share/xsesions
 
